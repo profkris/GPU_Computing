@@ -3,7 +3,7 @@
 ### Step 1: Open an Open-Source Platform
 
 Open either Google Colab or Kaggle in your browser.
-
+----------------------------------------------------------------------------------------------------
 ### Step 2: Check GPU Availability
 
 In a code cell, run the following command to check if a GPU is available:
@@ -13,7 +13,7 @@ In a code cell, run the following command to check if a GPU is available:
 /bin/bash: nvidia-smi: command not found
 
 If nvidia-smi is not found, proceed to Step 3.
-
+-----------------------------------------------------------------------------------------------------
 ## Step 3: Select Runtime as GPU from settings
 
 again check if a GPU is available:
@@ -41,19 +41,23 @@ you will get this kind of massesge if GPU is set properly
 |=========================================================================================|
 |  No running processes found                                                             |
 +-----------------------------------------------------------------------------------------+
-
+-------------------------------------------------------------------------------------------------------------------
 ## Step 4: In same code cell write code along with %%writefile <code_name.cu>
 
 eg. 
 %%writefile test.cu
 // Your CUDA code here
 
+---------------------------------------------------------------------------------------------------------------------
+
 ## Step 5: Compile the CUDA code using nvcc:
 
 ! nvcc <code_name.cu> -o <any_executable_name>
 eg. ! nvcc test.cu -o test
 
-## Step 5: Execute your code
+----------------------------------------------------------------------------------------------------------------------
+
+## Step 6: Execute your code
 
 ! nvcc ./<executable_name>
 eg. !./test
